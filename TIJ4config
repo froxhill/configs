@@ -1,0 +1,42 @@
+JAVA 编程思想配置
+
+首先需要工具，jdk1.5/1.6环境变量需要配置(为了能运行ant)，
+Eclipse，
+python2.7.4(环境变量需要配置)，
+ant1.8.4(环境变量需要配置)(http://ant.apache.org/bindownload.cgi)，
+
+TIJ4-CODE源码，gitbash，导入JRE1.5或1.6以上环境，JDK需要安装，
+
+JAR包:
+javassist.jar，(http://sourceforge.net/projects/jboss/files/Javassist/3.16.1-GA/ )
+javaws.jar(jdk1.6/jre/lib中的)，
+junit-4.1.jar，
+netmindview.jar，
+tools.jar(jdk1.6/lib)，
+xom-1.2.10.jar,(http://www.xom.nu/)
+SWT.jar(http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.7.2-201202080800/swt-3.7.2-win32-win32-x86.zip)
+
+JAVA_HOME
+D:\Java\jdk1.6.0_45
+
+ANT_HOME
+D:\apache-ant-1.8.4
+
+PATH:
+;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;D:\python2.7/bin;D:\Python27;%ANT_HOME%\bin;(%ANT_HOME%\lib;待定并不一定需要)
+
+CLASSPATH:
+不一定要写(.;C:\Program Files\Java\jdk1.6.0_29\lib;C:\TIJ4\code;c:\TIJ4\xom-1.2.8.jar;c:\TIJ4\javassist.jar;c:\TIJ4\swt.jar;c:\TIJ4\swt-debug.jar;C:\Program Files\Java\jdk1.6.0_29\jre\lib\javaws.jar)
+
+ant -version
+cd TIJ4-CODE下，然后ant build(执行之前需要改arg1="1.5"为arg1="1.6")，
+然后执行python -v
+python Eclipse.py(文件里的os.remove("reusing/Lisa.java");此句用#注释掉)
+
+ant，python都编译后，直接import新java project from existing //使用eclipse添加File->project-> create a Java Project from ant 
+//Buildfile(buildfile选择access目录下的build.xml，并且project name需要改一下),添加新项目，
+
+
+
+新项目下有的包是以源码进行添加的，需要Java build path，改变JRE环境，添加JAR包，source将那些子包选中作为源码的都移除
+
